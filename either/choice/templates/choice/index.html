@@ -1,0 +1,7 @@
+{% extends 'choice/base.html' %}
+{%block bb%}
+{% for choice in choices %}
+<h1>{{choice.title}}</h1>
+<a href="/choices/{{choice.id}}/">본문보기</a>
+{% endfor %}
+{%endblock%}

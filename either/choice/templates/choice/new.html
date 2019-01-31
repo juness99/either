@@ -1,0 +1,20 @@
+{% extends 'choice/base.html' %}
+{% block bb %}
+<form action ="/choices/create/" method=post>
+    {% csrf_token %}
+  <div class="form-group">
+    <label for="title">주제</label>
+    <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp" placeholder="주제를 입력하세요">
+  </div>
+  <div class="form-group">
+    <label for="select">옵션</label>
+    <input type="text" class="form-control" name="content" id="select" placeholder="첫번째옵션">
+  </div>
+  <div class="form-group">
+    <label for="select">옵션</label>
+    <input type="text" class="form-control" name="content_2" id="select" placeholder="두번째옵션">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}
